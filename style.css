@@ -3,6 +3,9 @@
     font-weight: 300;
     color: #f2f2f2;
 }
+*::selection{
+    color: #0096FF;
+}
 .logo{
     font-family: "Shrikhand", serif;
     font-weight: 400;
@@ -44,6 +47,14 @@ header{
     left: 50%;
     transform: translateX(-50%);
     display: block;
+}
+
+.headerspan{
+    height: 10%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -321,10 +332,6 @@ nav label {
     background-color: #333;
 }
 
-nav label:hover {
-    background-color: #555;
-}
-
 #touch {
     display: none;
 }
@@ -341,12 +348,12 @@ nav ul {
     top: 100%;
     background-color: #333;
     width: 100%;
-    padding: 0; 
+    padding: 0;
 }
 
 nav ul li {
     border-bottom: 1px solid #444;
-    margin: 0; 
+    margin: 0;
 }
 
 nav ul li:last-child {
@@ -371,6 +378,7 @@ nav ul li a:hover {
     max-height: 500px;
     transition: max-height 0.5s ease-in;
 }
+
 
 /* ABOUT STYLES */
 
@@ -398,4 +406,81 @@ nav ul li a:hover {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    transition: 3.2s ease-in-out;
+}
+
+.prof-cont:hover .profile-img{
+    transform: rotate(1440deg);
+    transition: 3.2s ease-in-out 0.3s;
+}
+
+.namelinks{
+    text-decoration: none;
+}
+
+.namelinks:hover{
+    text-decoration: underline;
+}
+
+.rotate{
+    overflow: hidden;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 30%;
+    top: 200px;
+    transition: 300ms;
+}
+
+.rotate img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    animation: rotate 2s linear infinite ;
+}
+
+
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.game-link{
+    position: absolute !important;
+    top: 50%;
+    text-align: center;
+    text-decoration: none;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    margin-top: 10px;
+}
+
+.bot-game{
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+.game-link:hover,.bot-game:hover{
+    text-decoration: underline;
+}
+
+#counter{
+    position: absolute !important;
+    font-weight: 500;
+    font-size: 3rem;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#timer{
+    position: absolute;
+    font-weight: 300;
+    font-size: 2rem;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
