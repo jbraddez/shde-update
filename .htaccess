@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteRule ^about-me about-me.html [NC]
+RewriteRule ^home index.html [NC]
+RewriteRule ^social social.html [NC]
+RewriteRule ^game game.html [NC]
+RewriteRule ^contact contact.html [NC]
